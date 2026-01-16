@@ -33,22 +33,25 @@ h1 {
   border-radius: 1rem;
   font-size: 1.1rem;
 }
+
+/* Diagram container */
+.diagram-container {
+  width: 100%;
+  height: 70vh;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
 </style>
 
 <div class="text-center px-6 md:px-12 relative">
 
   <!-- QR icon above title -->
   <div class="mb-6">
-    <svg 
-      class="w-24 h-24 md:w-32 md:h-32 mx-auto text-purple-400 opacity-90"
+    <svg xmlns="http://www.w3.org/2000/svg"  class="w-24 h-24 md:w-32 md:h-32 mx-auto text-purple-400 opacity-90"
       viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      stroke-width="1.8"
-    >
-      <path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h2v2h-2zM19 15h2v2h-2zM15 19h2v2h-2zM19 19h2v2h-2z"/>
-      <path d="M7 7h2v2H7zM17 17h2v2h-2z"/>
-    </svg>
+      fill="none" ><path fill="currentColor" d="M3 7q-.425 0-.712-.288T2 6V3q0-.425.288-.712T3 2h3q.425 0 .713.288T7 3t-.288.713T6 4H4v2q0 .425-.288.713T3 7m0 15q-.425 0-.712-.288T2 21v-3q0-.425.288-.712T3 17t.713.288T4 18v2h2q.425 0 .713.288T7 21t-.288.713T6 22zm15 0q-.425 0-.712-.288T17 21t.288-.712T18 20h2v-2q0-.425.288-.712T21 17t.713.288T22 18v3q0 .425-.288.713T21 22zm3-15q-.425 0-.712-.288T20 6V4h-2q-.425 0-.712-.288T17 3t.288-.712T18 2h3q.425 0 .713.288T22 3v3q0 .425-.288.713T21 7m-3.5 12v-1.5H19V19zm0-3v-1.5H19V16zM16 17.5V16h1.5v1.5zM14.5 19v-1.5H16V19zM13 17.5V16h1.5v1.5zm3-3V13h1.5v1.5zM14.5 16v-1.5H16V16zM13 14.5V13h1.5v1.5zm1-3.5q-.425 0-.712-.288T13 10V6q0-.425.288-.712T14 5h4q.425 0 .713.288T19 6v4q0 .425-.288.713T18 11zm-8 8q-.425 0-.712-.288T5 18v-4q0-.425.288-.712T6 13h4q.425 0 .713.288T11 14v4q0 .425-.288.713T10 19zm0-8q-.425 0-.712-.288T5 10V6q0-.425.288-.712T6 5h4q.425 0 .713.288T11 6v4q0 .425-.288.713T10 11zm0.5 6.5h3v-3h-3zm0-8h3v-3h-3zm8 0h3v-3h-3z"/></svg>
   </div>
 
   <h1 class="text-6xl md:text-8xl font-extrabold mb-6 text-gradient">
@@ -69,16 +72,15 @@ h1 {
 
 ---
 
-<!-- Rest of your slides remain the same -->
-
-<div class="flex flex-col items-center justify-center h-full">
+<!-- This slide uses iframe instead -->
+<div class="flex items-center justify-center h-full">
   <div class="w-full max-w-5xl bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-2xl">
     <iframe 
-      src="/drawio.html" 
+      src="/diagram.html" 
       class="w-full aspect-[16/9] border-0 rounded-xl"
+      loading="eager"
     ></iframe>
   </div>
-
 </div>
 
 ---
@@ -86,7 +88,7 @@ h1 {
 <div class="flex items-center justify-center h-full">
   <div class="w-full max-w-5xl bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-2xl">
     <img 
-      src="/fullpicture.png" 
+      src="./fullpicture.png" 
       class="w-full rounded-xl border border-white/5 shadow-lg"
     />
   </div>
