@@ -1,80 +1,182 @@
 ---
-theme: default
-class: h-screen flex flex-col items-center justify-center text-white
-layout: cover
-background: linear-gradient(to bottom, #0a0a1f, #120d2e, #1a133f, #0f0f1a)
+theme: "@ktym4a/slidev-theme-ktym4a"
+themeConfig:
+  baseColor: "green"
+  colorPattern: "rotation"
 ---
 
-<style>
-html, body, #app, .slidev-layout {
-  background: linear-gradient(to bottom, #0a0a1f, #120d2e, #1a133f, #0f0f1a) !important;
-  background-attachment: fixed;
-  color: #e0e0ff;
-}
+# QR Payments
 
-h1, .text-gradient {
-  background: linear-gradient(90deg, #7c3aed, #c084fc, #ec4899, #a78bfa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 2px 8px rgba(167, 139, 250, 0.5));
-}
+A low-cost payment ecosystem for merchants
 
-h1 {
-  text-shadow: 0 0 30px rgba(192, 132, 252, 0.4);
-}
+<div class="presenter-box">
+  Presented by Roshan Sutihar
+</div>
 
-/* Presenter info - smaller & cleaner */
-.presenter-box {
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 0.4rem 0.9rem;
-  border-radius: 1rem;
-  font-size: 1.1rem;
-}
+---
 
-/* Diagram container */
-.diagram-container {
-  width: 100%;
-  height: 70vh;
-  border-radius: 0.75rem;
-  overflow: hidden;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
+# The US Payment Problem
 
-.svg-slide-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-</style>
+## Cost Barriers for Merchants
 
-<div class="text-center px-6 md:px-12 relative">
+<div class="grid grid-cols-2 gap-4">
 
-  <!-- QR icon above title -->
-  <div class="mb-6">
-    <svg xmlns="http://www.w3.org/2000/svg"  class="w-24 h-24 md:w-32 md:h-32 mx-auto text-purple-400 opacity-90"
-      viewBox="0 0 24 24" 
-      fill="none" ><path fill="currentColor" d="M3 7q-.425 0-.712-.288T2 6V3q0-.425.288-.712T3 2h3q.425 0 .713.288T7 3t-.288.713T6 4H4v2q0 .425-.288.713T3 7m0 15q-.425 0-.712-.288T2 21v-3q0-.425.288-.712T3 17t.713.288T4 18v2h2q.425 0 .713.288T7 21t-.288.713T6 22zm15 0q-.425 0-.712-.288T17 21t.288-.712T18 20h2v-2q0-.425.288-.712T21 17t.713.288T22 18v3q0 .425-.288.713T21 22zm3-15q-.425 0-.712-.288T20 6V4h-2q-.425 0-.712-.288T17 3t.288-.712T18 2h3q.425 0 .713.288T22 3v3q0 .425-.288.713T21 7m-3.5 12v-1.5H19V19zm0-3v-1.5H19V16zM16 17.5V16h1.5v1.5zM14.5 19v-1.5H16V19zM13 17.5V16h1.5v1.5zm3-3V13h1.5v1.5zM14.5 16v-1.5H16V16zM13 14.5V13h1.5v1.5zm1-3.5q-.425 0-.712-.288T13 10V6q0-.425.288-.712T14 5h4q.425 0 .713.288T19 6v4q0 .425-.288.713T18 11zm-8 8q-.425 0-.712-.288T5 18v-4q0-.425.288-.712T6 13h4q.425 0 .713.288T11 14v4q0 .425-.288.713T10 19zm0-8q-.425 0-.712-.288T5 10V6q0-.425.288-.712T6 5h4q.425 0 .713.288T11 6v4q0 .425-.288.713T10 11zm0.5 6.5h3v-3h-3zm0-8h3v-3h-3zm8 0h3v-3h-3z"/></svg>
+<div class="bg-white/10 p-5 rounded-xl border border-white/20">
+
+<h4 class="text-yellow-300 font-bold mb-2">Transaction Fees</h4>
+
+- **Interchange:** 1.5% - 2.5%
+- **Assessment:** 0.11% - 0.13%
+- **Processor:** 0.25% - 0.5%
+- **Total:** <span class="text-green-400">1.86% - 3.13%</span>
+
+</div>
+
+<div class="bg-white/10 p-5 rounded-xl border border-white/20">
+
+<h4 class="text-yellow-300 font-bold mb-2">Additional Costs</h4>
+
+- 💳 **Equipment:** $300 - $1,500+
+- 📅 **Monthly:** $10 - $30+
+- 📊 **PCI Compliance:** $100+/yr
+- ⚠️ **Chargebacks:** $15 - $25
+
+</div>
+
+</div>
+
+---
+
+# The Real Impact
+
+### 💡 For a merchant doing $50,000/month:
+
+<div class="flex flex-col gap-4 mt-4">
+
+<div class="bg-red-500/10 p-6 rounded-xl border border-red-500/30">
+<p class="text-red-300 font-bold text-xl">Traditional Credit Card System</p>
+<p class="text-3xl font-mono">$11,160 - $18,780 annual fees</p>
+</div>
+
+<div class="bg-green-500/10 p-6 rounded-xl border border-green-500/30">
+<p class="text-green-300 font-bold text-xl">QR Payment Alternative</p>
+<p class="text-3xl font-mono">$1,500 - $3,000 annual fees</p>
+</div>
+
+</div>
+
+<div class="text-center mt-8">
+  <div class="inline-block bg-green-500 text-black px-8 py-3 rounded-full font-bold text-2xl">
+    75-85% COST SAVINGS!
   </div>
+</div>
 
-  <h1 class="text-6xl md:text-8xl font-extrabold mb-6 text-gradient">
-    QR Payments
-  </h1>
+---
 
-  <p class="text-2xl md:text-3xl font-medium text-gray-300/90 mb-10">
-    A low-cost payment ecosystem for merchants
-  </p>
+# Global Success Stories
 
-  <!-- Smaller presenter box -->
-  <div class="presenter-box inline-block">
-    <p class="text-purple-300/90 font-medium">
-      Presented by Roshan Sutihar
-    </p>
+## QR Payments Worldwide
+
+<div class="grid grid-cols-3 gap-3">
+
+<div class="bg-white/5 p-3 rounded border border-white/10">
+<span class="text-2xl">🇨🇳</span> **China** <br>
+<span class="text-xs">Fees < 0.3% | 1.3B Users</span>
+</div>
+
+<div class="bg-white/5 p-3 rounded border border-white/10">
+<span class="text-2xl">🇮🇳</span> **India** <br>
+<span class="text-xs">UPI: 0% Merchant Fees</span>
+</div>
+
+<div class="bg-white/5 p-3 rounded border border-white/10">
+<span class="text-2xl">🇸🇬</span> **Singapore** <br>
+<span class="text-xs">Unified National SGQR</span>
+</div>
+
+<div class="bg-white/5 p-3 rounded border border-white/10">
+<span class="text-2xl">🇧🇷</span> **Brazil** <br>
+<span class="text-xs">PIX: 140M+ Users</span>
+</div>
+
+<div class="bg-white/5 p-3 rounded border border-white/10">
+<span class="text-2xl">🇹🇭</span> **Thailand** <br>
+<span class="text-xs">PromptPay: Instant Bank Tx</span>
+</div>
+
+<div class="bg-white/5 p-3 rounded border border-white/10">
+<span class="text-2xl">🇪🇺</span> **EU** <br>
+<span class="text-xs">EPI: Pan-European standard</span>
+</div>
+
+</div>
+
+---
+
+# Why QR Payments Win
+
+<div class="grid grid-cols-2 gap-10">
+
+<div>
+<h4 class="text-green-400 font-bold mb-4">For Merchants</h4>
+
+- ✅ 80-90% lower fees
+- ✅ No expensive hardware
+- ✅ Instant settlement
+</div>
+
+<div>
+<h4 class="text-blue-400 font-bold mb-4">For Consumers</h4>
+
+- 📱 Works with existing Mobile banking app
+- 💲 No intermiditiary balance holds
+- ⚡ Faster checkout
+- 🔒 Enhanced security
+</div>
+
+</div>
+
+---
+
+# Project Motivation
+
+<div class="grid grid-cols-2 gap-6">
+
+<div class="space-y-4">
+<div class="bg-yellow-400/10 p-4 rounded border-l-4 border-yellow-400">
+<strong>High Entry Barrier</strong> <br>
+<span class="text-sm">Small shops pay $2k+ just to start.</span>
+</div>
+<div class="bg-yellow-400/10 p-4 rounded border-l-4 border-yellow-400">
+<strong>Global Lag</strong> <br>
+<span class="text-sm">US trails 20+ countries in tech.</span>
+</div>
+</div>
+
+<div class="bg-green-500/10 p-6 rounded-xl border border-green-500/20">
+<h4 class="font-bold mb-4">The Solution:</h4>
+
+- **Affordable** (Zero setup)
+- **Simple** (No tech skills)
+- **Secure** (No card data)
+
+<div class="mt-4 italic text-center">"Democratizing digital payments"</div>
+</div>
+
+</div>
+
+---
+
+<div class="flex items-center justify-center h-full">
+  <div class="w-full max-w-5xl">
+      <div class="diagram-container">
+        <object 
+          type="image/svg+xml" 
+          data="/basicflow.svg" 
+          class="w-full h-full"
+        >
+        </object>
+    </div>
   </div>
 </div>
 
@@ -82,36 +184,18 @@ h1 {
 
 <div class="flex items-center justify-center h-full">
   <div class="w-full max-w-5xl">
-    <div class="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-2xl">
       <div class="diagram-container">
         <object 
           type="image/svg+xml" 
-          data="/archetecture.svg" 
+          data="/back.svg" 
           class="w-full h-full"
         >
-          <!-- Fallback in case SVG doesn't load -->
-          <div class="w-full h-full flex items-center justify-center text-gray-400">
-            Architecture diagram failed to load
-          </div>
         </object>
-      </div>
     </div>
   </div>
 </div>
-
----
-
-<div class="svg-slide-container">
-  <div class="w-full max-w-5xl bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-2xl">
-    <img 
-      src="./fullpicture.png" 
-      class="w-full rounded-xl border border-white/5 shadow-lg"
-    />
-  </div>
-</div>
-
 ---
 
 <div class="abs-br m-8 text-sm opacity-60">
-  Raman • QR Payments • January 2026
+  Roshan Sutihar • QR Payments • January 2026
 </div>
