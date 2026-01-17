@@ -43,6 +43,14 @@ h1 {
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.svg-slide-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
 </style>
 
 <div class="text-center px-6 md:px-12 relative">
@@ -72,20 +80,28 @@ h1 {
 
 ---
 
-<!-- This slide uses iframe instead -->
 <div class="flex items-center justify-center h-full">
-  <div class="w-full max-w-5xl bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-2xl">
-    <iframe 
-      src="/diagram.html" 
-      class="w-full aspect-[16/9] border-0 rounded-xl"
-      loading="eager"
-    ></iframe>
+  <div class="w-full max-w-5xl">
+    <div class="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-2xl">
+      <div class="diagram-container">
+        <object 
+          type="image/svg+xml" 
+          data="/archetecture.svg" 
+          class="w-full h-full"
+        >
+          <!-- Fallback in case SVG doesn't load -->
+          <div class="w-full h-full flex items-center justify-center text-gray-400">
+            Architecture diagram failed to load
+          </div>
+        </object>
+      </div>
+    </div>
   </div>
 </div>
 
 ---
 
-<div class="flex items-center justify-center h-full">
+<div class="svg-slide-container">
   <div class="w-full max-w-5xl bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-2xl">
     <img 
       src="./fullpicture.png" 
