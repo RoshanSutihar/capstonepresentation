@@ -90,6 +90,11 @@ A low-cost payment ecosystem for merchants
 </div>
 
 <div class="bg-white/5 p-3 rounded border border-white/10">
+<span class="text-2xl">🇳🇵</span> **Nepal** <br>
+<span class="text-xs">Bank Fee: flat $0.10-$0.25</span>
+</div>
+
+<div class="bg-white/5 p-3 rounded border border-white/10">
 <span class="text-2xl">🇸🇬</span> **Singapore** <br>
 <span class="text-xs">Unified National SGQR</span>
 </div>
@@ -104,13 +109,8 @@ A low-cost payment ecosystem for merchants
 <span class="text-xs">PromptPay: Instant Bank Tx</span>
 </div>
 
-<div class="bg-white/5 p-3 rounded border border-white/10">
-<span class="text-2xl">🇪🇺</span> **EU** <br>
-<span class="text-xs">EPI: Pan-European standard</span>
 </div>
-
-</div>
-
+<p>Sources: <br><a href = "https://www.practicalecommerce.com/digital-payments-in-china-are-cheap-and-convenient"> Practical Commerce</a></p>
 ---
 
 # Why QR Payments Win
@@ -123,12 +123,22 @@ A low-cost payment ecosystem for merchants
 - ✅ 80-90% lower fees
 - ✅ No expensive hardware
 - ✅ Instant settlement
+- ✅ No fear of hardware failures
+
+<h4 class="text-green-400 font-bold mb-4">For Banks</h4>
+
+- ✅ No fraud losses
+- ✅ No card Manufacturing costs
+- ✅ No network fees
+- ✅ No support costs for lost/stolen costs
+
 </div>
 
 <div>
 <h4 class="text-blue-400 font-bold mb-4">For Consumers</h4>
 
 - 📱 Works with existing Mobile banking app
+- 💳 No Card Losses
 - 💲 No intermiditiary balance holds
 - ⚡ Faster checkout
 - 🔒 Enhanced security
@@ -144,12 +154,16 @@ A low-cost payment ecosystem for merchants
 
 <div class="space-y-4">
 <div class="bg-yellow-400/10 p-4 rounded border-l-4 border-yellow-400">
+<strong>Main Motivation</strong> <br>
+<span class="text-sm">To save as much money as possible for merchants & to make payments as much as convineient for customers.</span>
+</div>
+<div class="bg-yellow-400/10 p-4 rounded border-l-4 border-yellow-400">
 <strong>High Entry Barrier</strong> <br>
 <span class="text-sm">Small shops pay $2k+ just to start.</span>
 </div>
 <div class="bg-yellow-400/10 p-4 rounded border-l-4 border-yellow-400">
-<strong>Global Lag</strong> <br>
-<span class="text-sm">US trails 20+ countries in tech.</span>
+<strong>Everything moving form wallets to phone</strong> <br>
+<span class="text-sm">No need of carrying cash, passports, drivers licence, insurance then why not remove 4-5 plastic cards as well. </span>
 </div>
 </div>
 
@@ -167,12 +181,42 @@ A low-cost payment ecosystem for merchants
 
 ---
 
+# US Implementation Gaps
+
+## Why QR Payments Haven't Taken Off Yet
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+
+<div class="bg-white/10 p-5 rounded-xl border border-white/20">
+<h4 class="text-yellow-300 font-bold mb-3">Infrastructure Challenges</h4>
+
+<ul class="space-y-2">
+<li>🚫 <span class="font-semibold">No instant transfer mechanism</span> between banks</li>
+<li>🚫 <span class="font-semibold">No unified communication standard</span> across financial institutions</li>
+<li>🚫 <span class="font-semibold">Fragmented banking ecosystem</span> with incompatible systems</li>
+</ul>
+</div>
+
+<div class="bg-white/10 p-5 rounded-xl border border-white/20">
+<h4 class="text-yellow-300 font-bold mb-3">Market Barriers</h4>
+
+<ul class="space-y-2">
+<li>🚫 <span class="font-semibold">Dominance of credit card networks</span> (Visa/Mastercard)</li>
+<li>🚫 <span class="font-semibold">Consumer habit inertia</span> with existing payment methods</li>
+<li>🚫 <span class="font-semibold">Lack of government-led initiative</span> unlike other countries</li>
+</ul>
+</div>
+
+</div>
+
+---
+
 <div class="flex items-center justify-center h-full">
   <div class="w-full max-w-5xl">
-      <div class="diagram-container">
+      <div class="diagram-container" style = "margin-top:50px;">
         <object 
           type="image/svg+xml" 
-          data="/basicflow.svg" 
+          data="/updatedbasic.svg" 
           class="w-full h-full"
         >
         </object>
@@ -187,13 +231,14 @@ A low-cost payment ecosystem for merchants
       <div class="diagram-container">
         <object 
           type="image/svg+xml" 
-          data="/back.svg" 
+          data="/withqrdata.svg" 
           class="w-full h-full"
         >
         </object>
     </div>
   </div>
 </div>
+
 ---
 
 <div class="abs-br m-8 text-sm opacity-60">
