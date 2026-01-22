@@ -6,6 +6,10 @@
     "qrcode.vue": "^3.6.0"
   },
   "devDependencies": {
-    "playwright-chromium": "^1.57.0"
+    "playwright-chromium": "^1.57.0",
+    "@slidev/cli": "^0.60.2"
+  },
+  "scripts": {
+    "build": "slidev build"
   }
 }
